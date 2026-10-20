@@ -1,8 +1,8 @@
 -- Load the three legacy spreadsheets into the core tables.
 -- Rules: match each row to a student by school email first (it is unique and usually
 -- copied from the roster), then by student ID; merge duplicates; standardize values; and
--- log every change or rejected row in load_exceptions. Nothing is guessed: rows that
--- cannot be tied to a rostered student are held for staff review, not loaded.
+-- log every change or rejected row in load_exceptions. If a row can't be matched to a
+-- student on the roster, it is held for staff to review instead of being loaded.
 PRAGMA foreign_keys = ON;
 
 INSERT INTO report_settings (as_of_date) VALUES ('2025-12-12');

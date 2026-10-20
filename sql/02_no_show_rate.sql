@@ -1,7 +1,5 @@
 -- 02. No-show rate overall, by event type and by how far ahead students registered.
--- No-show = active registration with no check-in. Cancelled registrations are excluded.
--- Grain: one row per active registration; the LEFT JOIN to checkins cannot add rows
--- because checkins.registration_id is unique per event and student.
+-- A no-show is an active registration with no check-in, so cancelled ones are left out.
 
 WITH active AS (
     SELECT

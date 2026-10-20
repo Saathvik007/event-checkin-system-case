@@ -1,13 +1,13 @@
 -- 03. Duplicate registrations in the legacy registration sheet.
--- Confirmed: two or more rows that resolve to the same student for the same event.
--- Likely: a row that could not be tied to a student but carries the same name as an
--- identified registration for that event (usually a second sign-up with a personal email).
--- Names are not unique (see 00_headline_metrics.csv), so a likely pair can be two people;
--- staff confirm these before merging.
--- Student resolution repeats the migration rule: school email first, then student ID.
--- Grain: stage is one row per legacy row (3,258); output is one row per duplicate group.
+-- Confirmed means two or more rows for the same student and event. Likely means a row with
+-- no matched student that has the same name as a matched registration for that event
+-- (usually a second sign-up with a personal email). Names are not unique (see
+-- 00_headline_metrics.csv), so a likely pair can be two people and staff check it first.
+-- Students are matched the same way as in the migration: school email first, then student ID.
+-- stage has one row per legacy row (3,258). The name join in likely can match one row to
+-- several, so it is grouped back to one row per duplicate group.
 
--- Saved as a temporary view so the acceptance tests (uat_tests.sql) can reuse this exact logic.
+-- Temp view, so uat_tests.sql can use the same logic.
 DROP VIEW IF EXISTS temp.duplicate_registrations;
 CREATE TEMP VIEW duplicate_registrations AS
 WITH stage AS (

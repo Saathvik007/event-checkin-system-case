@@ -1,8 +1,5 @@
--- 01. Attendance rate by event.
--- Attendance rate = registered students who checked in / active registrations.
--- Walk-ins are counted separately and do not raise the attendance rate.
--- Grain: reg and ci are rolled up to one row per event before the join, so the result
--- has one row per event (40).
+-- 01. Attendance rate by event = registered students who checked in / active registrations.
+-- Walk-ins get their own column and do not raise the rate.
 
 -- Saved as a temporary view so the acceptance tests (uat_tests.sql) can reuse this exact logic.
 DROP VIEW IF EXISTS temp.attendance_rate_by_event;

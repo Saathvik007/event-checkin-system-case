@@ -3,13 +3,13 @@
 Prepared by: Saathvik Maheshuni
 Status: Draft for the office director to review
 
-The career office in this case is made up, and every number below comes from one term of synthetic data I generated for the case (see the README). The numbers show what the reports can find. They are not measurements of a real office.
+The career office in this case is made up, and every number below comes from one term of synthetic data I made for the case (see the README). The numbers show what the reports can find. They are not measurements of a real office.
 
 ## 1. Background
 
-The career office runs about 40 employer recruiting events a term: a career fair, information sessions, employer panels, workshops and networking nights. Registrations, door sign-ins and employer follow-ups are kept in three separate spreadsheets. Staff have to match them by hand, so attendance is only known days after each event, no-shows are rarely counted, and attendee lists reach employers late or not at all.
+The career office runs about 40 employer recruiting events a term: a career fair, information sessions, employer panels, workshops and networking nights. Registrations, door sign-ins and employer follow-ups are kept in three separate spreadsheets. Staff have to match them by hand, so attendance is only known days after each event. No-shows are rarely counted, and attendee lists reach employers late or never get sent.
 
-When I loaded one term of these spreadsheets into a database, the size of the problem was clear. 15.6% of the old rows needed a fix or were held back, 127 registration rows and 19 sign-in rows could not be matched to a student, and only 69.0% of employer follow-ups went out on time.
+When I loaded one term of these spreadsheets into a database, 15.6% of the old rows needed a fix or were held back. 127 registration rows and 19 sign-in rows could not be matched to a student, and only 69.0% of employer follow-ups went out on time.
 
 ## 2. Goals and measures
 
@@ -24,11 +24,11 @@ When I loaded one term of these spreadsheets into a database, the size of the pr
 
 In scope: online registration, door check-in for registered students and walk-ins, waitlists, cancellations, tracking employer follow-ups, reports on attendance, no-shows, follow-ups and data quality, and a one-time move of the current spreadsheets into the new system.
 
-Not in scope for now: self-service for employers, résumé books, appointment scheduling, and connecting to the university's single sign-on beyond looking up the roster.
+Not in scope for now: self-service for employers, resume books, appointment scheduling, and connecting to the university's single sign-on beyond looking up the roster.
 
 ## 4. Stakeholders
 
-| Stakeholder | Role | What they need |
+| Who | Role | What they need |
 |---|---|---|
 | Office director | Sponsor who approves the scope and targets | Attendance, no-show and follow-up numbers for the term |
 | Event coordinators | Plan events and send employer follow-ups | One list of registered students and attendees, and due dates for follow-ups |
@@ -40,7 +40,7 @@ Not in scope for now: self-service for employers, résumé books, appointment sc
 
 ## 5. Current process
 
-![Current-state process map](process_map_current_state.png)
+![Current process map](process_map_current_state.png)
 
 Main problems found in the synthetic term (outputs/05_data_quality_exceptions.csv and outputs/00_headline_metrics.csv):
 
@@ -53,7 +53,7 @@ Main problems found in the synthetic term (outputs/05_data_quality_exceptions.cs
 
 ## 6. New process
 
-![Future-state process map](process_map_future_state.png)
+![New process map](process_map_future_state.png)
 
 Students register with their student ID, and the system checks it against the roster. At the door, staff scan a QR code or ID card, or look up walk-ins on the roster. The check-in is saved right away and linked to the registration. After each event the system creates one follow-up task for each employer, due in 3 business days, and the coordinator's list shows anything that is overdue.
 
@@ -74,8 +74,8 @@ Students register with their student ID, and the system checks it against the ro
 | FR-11 | Students and employers are picked from master lists, never typed in by hand. | Must | UAT-06 |
 | FR-12 | A duplicate report lists confirmed and likely duplicate registrations in imported data. | Should | UAT-13 |
 | FR-13 | The migration logs every old row it changes or holds back, with the reason, and a data-quality report summarizes the log. | Must | UAT-14 |
-| FR-14 | Students get a confirmation with a QR code and a reminder the day before the event. | Should | Vendor build, not in the prototype |
-| FR-15 | Attendee lists sent to employers only include students who agreed to share their details. | Must | Vendor build, not in the prototype |
+| FR-14 | Students get a confirmation with a QR code and a reminder the day before the event. | Should | Vendor build (outside the prototype) |
+| FR-15 | Attendee lists sent to employers only include students who agreed to share their details. | Must | Vendor build (outside the prototype) |
 
 ## 8. Non-functional requirements
 
@@ -113,16 +113,16 @@ Given the coordinator sends the list, then the date it was sent is saved and the
 US-07. As the office director, I want no-show and follow-up numbers for the term so that I can see which events and practices work.
 Given a term of data, when I open the summary, then I see the no-show rate by event type and by how early students registered, and the share of follow-ups sent on time.
 
-US-08. As the data owner, I want every imported row that was changed or held back to be logged so that nothing disappears without a record.
+US-08. As the data owner, I want each imported row that was changed or held back to be logged so that I can see what happened to every row.
 Given the old spreadsheets are loaded, then each fix or rejected row shows up in the exceptions log with the source row and what was done, and the counts match the source spreadsheets.
 
 ## 10. Data and reports
 
-The data model and every field are described in data_dictionary.md. The prototype reports are in sql/: attendance rate by event (01), no-show rate (02), duplicate registrations (03), employer follow-up status (04), data-quality problems (05) and check-in arrival times (06). In the synthetic term, 39.6% of check-ins came in the first 10 minutes after the start, and 74.4% of students had arrived by then. So the door should have the most staff from 15 minutes before the start to 10 minutes after.
+The data model and every field are described in data_dictionary.md. The prototype reports are in sql/: attendance rate by event (01), no-show rate (02), duplicate registrations (03), employer follow-up status (04), data-quality problems (05) and check-in arrival times (06). In the term I loaded, 39.6% of check-ins came in the first 10 minutes after the start, and 74.4% of students had arrived by then. So the door should have the most staff from 15 minutes before the start to 10 minutes after.
 
 ## 11. Assumptions, constraints and open questions
 
-Assumptions: the registrar can send a roster file every day, students carry an ID card or phone, and events are held in rooms with Wi-Fi.
+Assumptions: the registrar can send a roster file every day. Students carry an ID card or phone, and events are held in rooms with Wi-Fi.
 
 Constraints: I assumed there is no budget for custom development, so the requirements are written so that a vendor product or an existing campus system can meet them.
 

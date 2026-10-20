@@ -1,6 +1,6 @@
 -- Schema for the proposed check-in and attendance system (SQLite).
--- Core tables enforce the future-state rules. legacy_* tables hold the three spreadsheets
--- as they exist today, unchanged, so the migration and its exceptions can be audited.
+-- The core tables enforce the rules of the new process. The legacy_* tables keep the three
+-- spreadsheets as they are today, unchanged, so I can check the migration and its exceptions later.
 PRAGMA foreign_keys = ON;
 
 -- Reference data -----------------------------------------------------------------------

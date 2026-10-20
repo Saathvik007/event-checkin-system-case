@@ -1,11 +1,8 @@
--- 05. Data-quality exceptions found when the legacy spreadsheets were loaded, plus one live
--- check on the core tables (events where check-ins exceeded capacity).
--- One legacy row can carry several issues, so affected_rows is counted per issue and the
--- issue rows do not add up to a row total (00_headline_metrics.sql has the distinct count).
--- Grain: load_exceptions has one row per row-issue pair; grouping gives one row per
--- source, issue and action.
+-- 05. Problems found while loading the legacy sheets, plus a live check for events where
+-- check-ins went over capacity. One row can have several issues, so these counts don't add
+-- up to a row total (00_headline_metrics.sql has that).
 
--- Saved as a temporary view so the acceptance tests (uat_tests.sql) can reuse this exact logic.
+-- uat_tests.sql checks this view too.
 DROP VIEW IF EXISTS temp.data_quality_exceptions;
 CREATE TEMP VIEW data_quality_exceptions AS
 WITH source_rows AS (

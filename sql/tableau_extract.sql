@@ -1,7 +1,6 @@
--- Tableau extract: one row per event with attendance, follow-up and exception counts.
--- Rates in the dashboard are recomputed from the counts (for example
--- SUM(attended) / SUM(registered)), so filters by event type stay correct.
--- Grain: each CTE is rolled up to one row per event before the joins (40 rows).
+-- Tableau extract: one row per event with attendance, follow-up and exception counts. The
+-- dashboard works out rates from the counts, like SUM(attended) / SUM(registered), so they
+-- stay right when you filter by event type.
 
 WITH settings AS (SELECT as_of_date FROM report_settings),
 reg AS (

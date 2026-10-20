@@ -4,14 +4,14 @@ This is the SQLite database for the event check-in prototype, and all the data i
 
 ## students
 
-Registrar roster. One row per enrolled student; the system of record for identity. Rows in the synthetic database: 1,800.
+Student roster from the registrar. One row per enrolled student. This is the official list of who is a student. Rows in the synthetic database: 1,800.
 
 | Column | Type | Required | Key | Description |
 |---|---|---|---|---|
 | student_id | TEXT | Yes | PK | Student ID, 'S' plus six digits. Primary key. |
-| first_name | TEXT | Yes |  | Given name from the roster. |
-| last_name | TEXT | Yes |  | Family name from the roster. |
-| school_email | TEXT | Yes |  | University email address. Unique. |
+| first_name | TEXT | Yes |  | First name from the roster. |
+| last_name | TEXT | Yes |  | Last name from the roster. |
+| school_email | TEXT | Yes |  | University email address. No two students have the same one. |
 | class_year | INTEGER | Yes |  | Expected graduation year (2025-2032). |
 | major_group | TEXT | Yes |  | Broad field of study. |
 
@@ -21,8 +21,8 @@ Employers that recruit through the office. One row per employer. Rows in the syn
 
 | Column | Type | Required | Key | Description |
 |---|---|---|---|---|
-| employer_id | TEXT | Yes | PK | Employer code, e.g. EMP07. Primary key. |
-| employer_name | TEXT | Yes |  | Display name. Unique. |
+| employer_id | TEXT | Yes | PK | Employer code, like EMP07. Primary key. |
+| employer_name | TEXT | Yes |  | Name shown for the employer. No two employers have the same one. |
 | sector | TEXT | Yes |  | Industry group. |
 | recruiter_email | TEXT | Yes |  | Where attendee lists are sent. |
 
@@ -32,13 +32,13 @@ Recruiting events. One row per event. Rows in the synthetic database: 40.
 
 | Column | Type | Required | Key | Description |
 |---|---|---|---|---|
-| event_id | TEXT | Yes | PK | Event code, e.g. E005. Primary key. |
+| event_id | TEXT | Yes | PK | Event code, like E005. Primary key. |
 | event_name | TEXT | Yes |  | Title shown to students. |
 | event_type | TEXT | Yes |  | Career fair, Info session, Employer panel, Workshop or Networking night. |
-| starts_at | TEXT | Yes |  | Start, 'YYYY-MM-DD HH:MM' local time. |
-| ends_at | TEXT | Yes |  | End, same format; must be after starts_at. |
+| starts_at | TEXT | Yes |  | Start time, 'YYYY-MM-DD HH:MM' in local time. |
+| ends_at | TEXT | Yes |  | End time in the same format. It has to be after starts_at. |
 | location | TEXT | Yes |  | Room or venue. |
-| capacity | INTEGER | Yes |  | Room capacity; online registrations beyond it are waitlisted. |
+| capacity | INTEGER | Yes |  | How many people the room holds. Online registrations past this number go on the waitlist. |
 
 ## event_employers
 
@@ -46,21 +46,21 @@ Which employers take part in each event. One row per event and employer. Rows in
 
 | Column | Type | Required | Key | Description |
 |---|---|---|---|---|
-| event_id | TEXT | Yes | PK | Event. Part of the primary key; references events. |
-| employer_id | TEXT | Yes | PK | Employer. Part of the primary key; references employers. |
+| event_id | TEXT | Yes | PK | Event, from the events table. Part of the primary key. |
+| employer_id | TEXT | Yes | PK | Employer, from the employers table. Part of the primary key. |
 
 Foreign keys: employer_id -> employers.employer_id; event_id -> events.event_id.
 
 ## registrations
 
-Student sign-ups. One row per student per event (unique). Rows in the synthetic database: 3,042.
+Student sign-ups. A student can only have one row per event. Rows in the synthetic database: 3,042.
 
 | Column | Type | Required | Key | Description |
 |---|---|---|---|---|
-| registration_id | INTEGER | Yes | PK | System-generated key. |
-| event_id | TEXT | Yes |  | Event registered for; references events. |
-| student_id | TEXT | Yes |  | Registering student; references students. Required. |
-| contact_email | TEXT | Yes |  | Email for confirmations; must look like an address (one @, no spaces). |
+| registration_id | INTEGER | Yes | PK | ID the database assigns automatically. |
+| event_id | TEXT | Yes |  | Event the student registered for (from events). |
+| student_id | TEXT | Yes |  | Student who registered (from students). Required. |
+| contact_email | TEXT | Yes |  | Email for confirmations. It has to look like an address (one @ and no spaces). |
 | registered_at | TEXT | Yes |  | When the registration was made, 'YYYY-MM-DD HH:MM'. |
 | channel | TEXT | Yes |  | Online form, Staff entry or Legacy import. |
 | status | TEXT | Yes |  | Registered, Waitlisted or Cancelled. Only Registered counts toward attendance and no-shows. |
@@ -69,15 +69,15 @@ Foreign keys: event_id -> events.event_id; student_id -> students.student_id.
 
 ## checkins
 
-Arrivals at events. One row per student per event (unique). Rows in the synthetic database: 1,766.
+Students who arrived at events. A student can only be checked in once per event. Rows in the synthetic database: 1,766.
 
 | Column | Type | Required | Key | Description |
 |---|---|---|---|---|
-| checkin_id | INTEGER | Yes | PK | System-generated key. |
-| event_id | TEXT | Yes |  | Event attended; references events. |
-| student_id | TEXT | Yes |  | Student checked in; references students. Required. |
-| registration_id | INTEGER | No |  | Matching active registration; NULL means a walk-in. |
-| checked_in_at | TEXT | Yes |  | Check-in time; must fall between 60 minutes before start and the end. |
+| checkin_id | INTEGER | Yes | PK | ID the database assigns automatically. |
+| event_id | TEXT | Yes |  | Event the student came to (from events). |
+| student_id | TEXT | Yes |  | Student who checked in (from students). Required. |
+| registration_id | INTEGER | No |  | The student's active registration for this event. Empty (NULL) for a walk-in. |
+| checked_in_at | TEXT | Yes |  | Check-in time. It has to be between 60 minutes before the start and the end of the event. |
 | method | TEXT | Yes |  | QR scan, ID card, Manual lookup or Legacy import. |
 
 Foreign keys: event_id -> events.event_id; registration_id -> registrations.registration_id; student_id -> students.student_id.
@@ -88,20 +88,20 @@ Attendee lists owed to employers. One row per event and employer. Rows in the sy
 
 | Column | Type | Required | Key | Description |
 |---|---|---|---|---|
-| event_id | TEXT | Yes | PK | Event; with employer_id, references event_employers. |
-| employer_id | TEXT | Yes | PK | Employer owed the list. |
+| event_id | TEXT | Yes | PK | Event. Together with employer_id it has to match a row in event_employers. |
+| employer_id | TEXT | Yes | PK | Employer who should get the attendee list. |
 | due_date | TEXT | Yes |  | Three business days after the event. |
-| sent_date | TEXT | No |  | Date the list was sent; NULL until sent. |
+| sent_date | TEXT | No |  | Date the list was sent. Empty (NULL) until then. |
 
 Foreign keys: (event_id, employer_id) -> event_employers(event_id, employer_id).
 
 ## report_settings
 
-Single-row table holding the reporting date. Rows in the synthetic database: 1.
+Holds the reporting date. It has just one row. Rows in the synthetic database: 1.
 
 | Column | Type | Required | Key | Description |
 |---|---|---|---|---|
-| as_of_date | TEXT | Yes |  | Date reports treat as today, so results are repeatable. |
+| as_of_date | TEXT | Yes |  | The date the reports use as today, so running them again gives the same results. |
 
 ## load_exceptions
 
@@ -109,49 +109,49 @@ Log of every legacy row the migration changed or held back. Rows in the syntheti
 
 | Column | Type | Required | Key | Description |
 |---|---|---|---|---|
-| exception_id | INTEGER | Yes | PK | System-generated key. |
+| exception_id | INTEGER | Yes | PK | ID the database assigns automatically. |
 | source_table | TEXT | Yes |  | Legacy sheet (or reference table) the problem came from. |
-| source_row_id | INTEGER | No |  | row_id in that sheet; NULL when the problem is a missing row. |
-| record_key | TEXT | No |  | Event plus student, email or employer, for staff follow-up. |
-| issue | TEXT | Yes |  | What was wrong, e.g. Missing student ID, Duplicate registration. |
-| action_taken | TEXT | Yes |  | What the migration did; 'Held for review' rows were not loaded. |
+| source_row_id | INTEGER | No |  | row_id in that sheet. Empty (NULL) when the problem is a missing row. |
+| record_key | TEXT | No |  | Event plus student, email or employer, so staff can follow up. |
+| issue | TEXT | Yes |  | What was wrong, for example Missing student ID or Duplicate registration. |
+| action_taken | TEXT | Yes |  | What the migration did. Rows marked 'Held for review' were not loaded. |
 
 ## legacy_registrations
 
-Registration spreadsheet as kept today, loaded as text without changes. Rows in the synthetic database: 3,258.
+The registration spreadsheet as staff keep it today, loaded as text with no changes. Rows in the synthetic database: 3,258.
 
 | Column | Type | Required | Key | Description |
 |---|---|---|---|---|
 | row_id | INTEGER | Yes | PK | Row number in the sheet. |
 | event_code | TEXT | No |  | Event code typed by staff. |
-| student_id | TEXT | No |  | As typed; may be blank or wrong. |
+| student_id | TEXT | No |  | As typed. Can be blank or wrong. |
 | full_name | TEXT | No |  | As typed. |
-| email | TEXT | No |  | As typed; may be personal or malformed. |
-| registered_on | TEXT | No |  | Form timestamp. |
-| status | TEXT | No |  | Free text; several spellings of Registered and Cancelled. |
+| email | TEXT | No |  | As typed. Can be a personal address or badly formatted. |
+| registered_on | TEXT | No |  | Time stamp from the form. |
+| status | TEXT | No |  | Free text, with several spellings of Registered and Cancelled. |
 
 ## legacy_signins
 
-Typed-up paper and tablet sign-in sheets, loaded as text without changes. Rows in the synthetic database: 1,836.
+The paper and tablet sign-in sheets after they were typed up, loaded as text with no changes. Rows in the synthetic database: 1,836.
 
 | Column | Type | Required | Key | Description |
 |---|---|---|---|---|
 | row_id | INTEGER | Yes | PK | Row number in the sheet. |
 | event_code | TEXT | No |  | Event code. |
-| student_id | TEXT | No |  | As written; may be blank. |
+| student_id | TEXT | No |  | As written. Can be blank. |
 | full_name | TEXT | No |  | As written. |
-| email | TEXT | No |  | As written; may be personal or mistyped. |
-| signed_in_at | TEXT | No |  | Time as typed; some carry the data-entry date. |
+| email | TEXT | No |  | As written. Can be a personal address or mistyped. |
+| signed_in_at | TEXT | No |  | Time as typed. Some have the date the sheet was typed up instead of the event date. |
 | sheet_type | TEXT | No |  | Paper sheet or Tablet. |
 
 ## legacy_followups
 
-Hand-kept follow-up tracker, loaded as text without changes. Rows in the synthetic database: 68.
+The follow-up tracker staff keep by hand, loaded as text with no changes. Rows in the synthetic database: 68.
 
 | Column | Type | Required | Key | Description |
 |---|---|---|---|---|
 | row_id | INTEGER | Yes | PK | Row number in the sheet. |
 | event_code | TEXT | No |  | Event code. |
-| employer_name | TEXT | No |  | As typed; spelling varies. |
-| sent_on | TEXT | No |  | Date sent; blank if not sent. |
+| employer_name | TEXT | No |  | As typed. The spelling varies. |
+| sent_on | TEXT | No |  | Date sent. Blank if it was not sent. |
 | notes | TEXT | No |  | Free text. |

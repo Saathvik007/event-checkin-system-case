@@ -1,6 +1,5 @@
--- 03 summary. Duplicate registrations rolled up to one row per type and pattern.
--- Uses the duplicate_registrations view, so 03_duplicate_registrations.sql has to run
--- first in the same session (run_reports.sql does this).
+-- 03 summary. The duplicate report rolled up by type and pattern. Run
+-- 03_duplicate_registrations.sql first in the same session (run_reports.sql does this).
 -- extra_rows = legacy rows beyond the one row each group should have had.
 
 SELECT duplicate_type,

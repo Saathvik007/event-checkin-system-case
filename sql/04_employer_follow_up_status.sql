@@ -1,11 +1,7 @@
--- 04. Employer follow-up status as of the report date.
--- Policy: the attendee list goes to each employer within 3 business days of the event
--- (due_date). Statuses: Sent on time, Sent late, Overdue (not sent and past due),
--- Not yet due.
--- Grain: follow_ups has one row per event and employer (primary key), so the joins to
--- events and employers keep one row per follow-up (71).
+-- 04. Follow-up status on the report date. Each attendee list is due 3 business days after
+-- the event: Sent on time, Sent late, Overdue (not sent and past due) or Not yet due.
 
--- Saved as a temporary view so the acceptance tests (uat_tests.sql) can reuse this exact logic.
+-- Also kept as a temp view for the tests in uat_tests.sql.
 DROP VIEW IF EXISTS temp.employer_follow_up_status;
 CREATE TEMP VIEW employer_follow_up_status AS
 WITH settings AS (SELECT as_of_date FROM report_settings)

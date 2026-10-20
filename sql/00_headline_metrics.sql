@@ -1,5 +1,5 @@
--- 00. Headline metrics for the term (synthetic data). Numbers quoted in the README,
--- requirements document and director summary come from this output or the numbered reports.
+-- 00. Headline numbers for the term. The numbers in the README and the two documents in
+-- deliverables/ come from here or from the numbered reports.
 
 WITH settings AS (SELECT as_of_date FROM report_settings),
 fu AS (

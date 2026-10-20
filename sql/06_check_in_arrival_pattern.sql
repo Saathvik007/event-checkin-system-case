@@ -1,6 +1,5 @@
--- 06. When do students arrive? Check-ins by minutes from event start, to size door staffing.
--- The career fair is left out: it runs as a four-hour open house, so arrivals spread out.
--- Grain: one row per check-in before bucketing; each check-in falls in exactly one bucket.
+-- 06. Check-ins by minutes from the event start, to plan door staffing. The career fair is
+-- left out because it runs as a four-hour open house and arrivals are spread out.
 
 WITH arrivals AS (
     -- Rounded to whole minutes: julianday arithmetic leaves tiny float errors that would

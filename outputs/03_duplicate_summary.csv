@@ -1,0 +1,4 @@
+duplicate_type,pattern,groups,legacy_rows,extra_rows
+Confirmed,"Same details submitted twice",58,116,58
+Confirmed,"Same email, different capitalization",31,62,31
+Likely,"Same name, second row not identified",50,100,50

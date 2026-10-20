@@ -1,0 +1,69 @@
+row_id,event_code,employer_name,sent_on,notes
+1,E003,Employer 16,2025-09-13,resume book
+2,E005,Employer 04,2025-09-20,
+3,E005,Employer 06,2025-09-26,resume book
+4,E005,Employer 07,2025-09-21,attendee list
+5,E005,Employer 08,2025-09-24,resume book
+6,E005,Employer 09,2025-09-21,attendee list
+7,E005,Employer 12,2025-09-30,resume book
+8,E005,Employer 13,2025-09-20,list + resumes
+9,E005,Employer 17,2025-09-19,
+10,E005,Employer 18,,
+11,E005,Employer 20,2025-09-18,
+12,E005,Employer 21,2025-09-21,
+13,E005,Employer 22,,attendee list
+14,E005,Employer 23,2025-09-19,attendee list
+15,E005,employer 24 ,2025-09-19,
+16,E005,Employer 25,2025-09-18,resume book
+17,E005,Employer 26,2025-09-18,
+18,E005,Employer 27 Recruiting,2025-09-19,attendee list
+19,E005,Employer 29,2025-09-20,resume book
+20,E005,Employer 30,2025-09-24,
+21,E007,Employer 27,2025-09-24,resume book
+22,E008,Employer 20,2025-09-26,
+23,E008,employer 24 ,2025-09-24,resume book
+24,E008,Employer 29,2025-09-24,attendee list
+25,E009,Employer 06,2025-09-28,attendee list
+26,E010,Employer 25,2025-10-10,list + resumes
+27,E011,Employer 21,2025-10-13,
+28,E012,Employer 05,2025-10-04,
+29,E014,Employer 01,,list + resumes
+30,E014,Employer 02,2025-10-11,
+31,E014,Employer 03,2025-10-10,list + resumes
+32,E015,Employer 11,2025-10-11,
+33,E016,Employer 09,2025-10-13,
+34,E017,Employer 27,2025-10-15,attendee list
+35,E018,Employer 29,2025-10-17,
+36,E020,employer 07 ,2025-10-25,attendee list
+37,E020,Employer 23,2025-10-27,resume book
+38,E021,Employer 21,2025-10-24,list + resumes
+39,E022,Employer 05,2025-10-28,attendee list
+40,E024,Employer 01,2025-10-31,
+41,E024,Employer 02,2025-11-03,
+42,E024,Employer 03,,list + resumes
+43,E026,Employer 09,2025-11-03,
+44,E026,Employer 13,2025-11-03,
+45,E026,Employer 26,2025-11-06,list + resumes
+46,E026,Employer 27 Recruiting,2025-11-03,
+47,E026,Employer 30,2025-11-04,
+48,E028,Employer 20,2025-11-21,
+49,E028,Employer 24,,
+50,E028,Employer 29,,
+51,E030,Employer 07,,attendee list
+52,E030,Employer 21,,list + resumes
+53,E030,Employer 22,2025-11-14,resume book
+54,E030,Employer 23,,
+55,E030,Employer 25,2025-11-12,
+56,E031,Employer 19,2025-11-19,
+57,E031,Employer 21,2025-11-23,
+58,E031,Employer 22,,
+59,E034,Employer 01,2025-11-26,
+60,E034,Employer 02,2025-12-01,resume book
+61,E034,Employer 03,2025-11-27,
+62,E034,Employer 08,2025-11-24,attendee list
+63,E034,Employer 11,2025-11-27,
+64,E035,Employer 11,2025-11-25,
+65,E037,Employer 27,2025-11-29,attendee list
+66,E038,Employer 29,2025-12-02,
+67,E039,Employer 06,2025-12-07,list + resumes
+68,E040,Employer 25,2025-12-08,resume book

@@ -1,0 +1,72 @@
+event_id,event_name,event_type,event_date,employer_id,employer_name,due_date,sent_date,status,days_past_due
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP11,"Employer 11",2025-09-23,,Overdue,80
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP18,"Employer 18",2025-09-23,,Overdue,80
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP22,"Employer 22",2025-09-23,,Overdue,80
+E014,"Government careers panel","Employer panel",2025-10-08,EMP01,"Employer 01",2025-10-13,,Overdue,60
+E020,"Healthcare careers panel","Employer panel",2025-10-22,EMP25,"Employer 25",2025-10-27,,Overdue,46
+E024,"Consumer goods careers panel","Employer panel",2025-10-31,EMP03,"Employer 03",2025-11-05,,Overdue,37
+E029,"Employer 06 information session","Info session",2025-11-10,EMP06,"Employer 06",2025-11-13,,Overdue,29
+E028,"Healthcare careers panel","Employer panel",2025-11-10,EMP24,"Employer 24",2025-11-13,,Overdue,29
+E028,"Healthcare careers panel","Employer panel",2025-11-10,EMP29,"Employer 29",2025-11-13,,Overdue,29
+E030,"Networking Night","Networking night",2025-11-12,EMP07,"Employer 07",2025-11-17,,Overdue,25
+E030,"Networking Night","Networking night",2025-11-12,EMP21,"Employer 21",2025-11-17,,Overdue,25
+E030,"Networking Night","Networking night",2025-11-12,EMP23,"Employer 23",2025-11-17,,Overdue,25
+E031,"Nonprofit careers panel","Employer panel",2025-11-17,EMP22,"Employer 22",2025-11-20,,Overdue,22
+E003,"Employer 16 information session","Info session",2025-09-12,EMP16,"Employer 16",2025-09-17,2025-09-13,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP04,"Employer 04",2025-09-23,2025-09-20,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP06,"Employer 06",2025-09-23,2025-09-26,"Sent late",3
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP07,"Employer 07",2025-09-23,2025-09-21,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP08,"Employer 08",2025-09-23,2025-09-24,"Sent late",1
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP09,"Employer 09",2025-09-23,2025-09-21,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP12,"Employer 12",2025-09-23,2025-09-30,"Sent late",7
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP13,"Employer 13",2025-09-23,2025-09-20,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP17,"Employer 17",2025-09-23,2025-09-19,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP20,"Employer 20",2025-09-23,2025-09-18,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP21,"Employer 21",2025-09-23,2025-09-21,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP23,"Employer 23",2025-09-23,2025-09-19,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP24,"Employer 24",2025-09-23,2025-09-19,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP25,"Employer 25",2025-09-23,2025-09-18,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP26,"Employer 26",2025-09-23,2025-09-18,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP27,"Employer 27",2025-09-23,2025-09-19,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP29,"Employer 29",2025-09-23,2025-09-20,"Sent on time",
+E005,"Fall Career Fair","Career fair",2025-09-18,EMP30,"Employer 30",2025-09-23,2025-09-24,"Sent late",1
+E007,"Employer 27 information session","Info session",2025-09-22,EMP27,"Employer 27",2025-09-25,2025-09-24,"Sent on time",
+E008,"Consumer goods careers panel","Employer panel",2025-09-23,EMP20,"Employer 20",2025-09-26,2025-09-26,"Sent on time",
+E008,"Consumer goods careers panel","Employer panel",2025-09-23,EMP24,"Employer 24",2025-09-26,2025-09-24,"Sent on time",
+E008,"Consumer goods careers panel","Employer panel",2025-09-23,EMP29,"Employer 29",2025-09-26,2025-09-24,"Sent on time",
+E009,"Employer 06 information session","Info session",2025-09-26,EMP06,"Employer 06",2025-10-01,2025-09-28,"Sent on time",
+E010,"Employer 25 information session","Info session",2025-09-29,EMP25,"Employer 25",2025-10-02,2025-10-10,"Sent late",8
+E011,"Employer 21 information session","Info session",2025-09-30,EMP21,"Employer 21",2025-10-03,2025-10-13,"Sent late",10
+E012,"Employer 05 information session","Info session",2025-10-03,EMP05,"Employer 05",2025-10-08,2025-10-04,"Sent on time",
+E014,"Government careers panel","Employer panel",2025-10-08,EMP02,"Employer 02",2025-10-13,2025-10-11,"Sent on time",
+E014,"Government careers panel","Employer panel",2025-10-08,EMP03,"Employer 03",2025-10-13,2025-10-10,"Sent on time",
+E015,"Employer 11 information session","Info session",2025-10-09,EMP11,"Employer 11",2025-10-14,2025-10-11,"Sent on time",
+E016,"Employer 09 information session","Info session",2025-10-13,EMP09,"Employer 09",2025-10-16,2025-10-13,"Sent on time",
+E017,"Employer 27 information session","Info session",2025-10-14,EMP27,"Employer 27",2025-10-17,2025-10-15,"Sent on time",
+E018,"Employer 29 information session","Info session",2025-10-16,EMP29,"Employer 29",2025-10-21,2025-10-17,"Sent on time",
+E020,"Healthcare careers panel","Employer panel",2025-10-22,EMP07,"Employer 07",2025-10-27,2025-10-25,"Sent on time",
+E020,"Healthcare careers panel","Employer panel",2025-10-22,EMP23,"Employer 23",2025-10-27,2025-10-27,"Sent on time",
+E021,"Employer 21 information session","Info session",2025-10-24,EMP21,"Employer 21",2025-10-29,2025-10-24,"Sent on time",
+E022,"Employer 05 information session","Info session",2025-10-27,EMP05,"Employer 05",2025-10-30,2025-10-28,"Sent on time",
+E024,"Consumer goods careers panel","Employer panel",2025-10-31,EMP01,"Employer 01",2025-11-05,2025-10-31,"Sent on time",
+E024,"Consumer goods careers panel","Employer panel",2025-10-31,EMP02,"Employer 02",2025-11-05,2025-11-03,"Sent on time",
+E026,"Networking Night","Networking night",2025-11-03,EMP09,"Employer 09",2025-11-06,2025-11-03,"Sent on time",
+E026,"Networking Night","Networking night",2025-11-03,EMP13,"Employer 13",2025-11-06,2025-11-03,"Sent on time",
+E026,"Networking Night","Networking night",2025-11-03,EMP26,"Employer 26",2025-11-06,2025-11-06,"Sent on time",
+E026,"Networking Night","Networking night",2025-11-03,EMP27,"Employer 27",2025-11-06,2025-11-03,"Sent on time",
+E026,"Networking Night","Networking night",2025-11-03,EMP30,"Employer 30",2025-11-06,2025-11-04,"Sent on time",
+E028,"Healthcare careers panel","Employer panel",2025-11-10,EMP20,"Employer 20",2025-11-13,2025-11-21,"Sent late",8
+E030,"Networking Night","Networking night",2025-11-12,EMP22,"Employer 22",2025-11-17,2025-11-14,"Sent on time",
+E030,"Networking Night","Networking night",2025-11-12,EMP25,"Employer 25",2025-11-17,2025-11-12,"Sent on time",
+E031,"Nonprofit careers panel","Employer panel",2025-11-17,EMP19,"Employer 19",2025-11-20,2025-11-19,"Sent on time",
+E031,"Nonprofit careers panel","Employer panel",2025-11-17,EMP21,"Employer 21",2025-11-20,2025-11-23,"Sent late",3
+E034,"Networking Night","Networking night",2025-11-24,EMP01,"Employer 01",2025-11-27,2025-11-26,"Sent on time",
+E034,"Networking Night","Networking night",2025-11-24,EMP02,"Employer 02",2025-11-27,2025-12-01,"Sent late",4
+E034,"Networking Night","Networking night",2025-11-24,EMP03,"Employer 03",2025-11-27,2025-11-27,"Sent on time",
+E034,"Networking Night","Networking night",2025-11-24,EMP08,"Employer 08",2025-11-27,2025-11-24,"Sent on time",
+E034,"Networking Night","Networking night",2025-11-24,EMP11,"Employer 11",2025-11-27,2025-11-27,"Sent on time",
+E035,"Employer 11 information session","Info session",2025-11-24,EMP11,"Employer 11",2025-11-27,2025-11-25,"Sent on time",
+E037,"Employer 27 information session","Info session",2025-11-28,EMP27,"Employer 27",2025-12-03,2025-11-29,"Sent on time",
+E038,"Employer 29 information session","Info session",2025-12-01,EMP29,"Employer 29",2025-12-04,2025-12-02,"Sent on time",
+E039,"Employer 06 information session","Info session",2025-12-04,EMP06,"Employer 06",2025-12-09,2025-12-07,"Sent on time",
+E040,"Employer 25 information session","Info session",2025-12-05,EMP25,"Employer 25",2025-12-10,2025-12-08,"Sent on time",

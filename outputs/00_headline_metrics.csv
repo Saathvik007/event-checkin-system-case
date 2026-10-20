@@ -1,0 +1,30 @@
+metric,value
+"Report as-of date",2025-12-12
+Events,40
+"Students on roster",1800
+"Legacy registration rows",3258
+"Registrations loaded (one per student per event)",3042
+"Active registrations",2864
+"Cancelled registrations",178
+"Legacy registration rows with no student ID",239
+"Legacy registration rows with a non-standard status",238
+"Legacy registration rows held for review",127
+"Legacy sign-in rows",1836
+"Check-ins loaded",1766
+"Walk-in check-ins (no registration)",159
+"Legacy sign-in rows held for review",37
+"Legacy sign-in rows held: student not identified",19
+"Legacy sign-in rows held: time outside event window only",18
+"Walk-ins whose name matches a held registration row at the same event",41
+"Roster names shared by two or more students",330
+"Attendance rate of active registrations (%)",56.1
+"No-show rate of active registrations (%)",43.9
+"Legacy rows with at least one exception",807
+"Share of legacy rows with at least one exception (%)",15.6
+"Employer follow-ups",71
+"Follow-ups sent on time",49
+"Follow-ups sent late",9
+"Follow-ups overdue (not sent, past due)",13
+"Follow-ups not yet due",0
+"Follow-ups sent on time (% of those due)",69.0
+"Events where check-ins exceeded capacity",0

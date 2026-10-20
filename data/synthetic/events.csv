@@ -1,0 +1,41 @@
+event_id,event_name,event_type,starts_at,ends_at,location,capacity
+E001,Resume review workshop,Workshop,2025-09-09 12:00,2025-09-09 13:00,Career Office Studio,40
+E002,Interview practice workshop,Workshop,2025-09-11 16:00,2025-09-11 17:00,Library Forum,60
+E003,Employer 16 information session,Info session,2025-09-12 18:00,2025-09-12 19:00,Library Forum,40
+E004,Professional profiles workshop,Workshop,2025-09-15 12:00,2025-09-15 13:00,Career Office Studio,40
+E005,Fall Career Fair,Career fair,2025-09-18 12:00,2025-09-18 16:00,Main Gym,700
+E006,Offer negotiation workshop,Workshop,2025-09-22 16:00,2025-09-22 17:00,Hall B Auditorium,30
+E007,Employer 27 information session,Info session,2025-09-22 18:00,2025-09-22 19:00,Hall B Auditorium,60
+E008,Consumer goods careers panel,Employer panel,2025-09-23 17:00,2025-09-23 18:30,Library Forum,80
+E009,Employer 06 information session,Info session,2025-09-26 17:00,2025-09-26 18:00,Student Center 212,40
+E010,Employer 25 information session,Info session,2025-09-29 17:00,2025-09-29 18:00,Student Center 212,60
+E011,Employer 21 information session,Info session,2025-09-30 12:00,2025-09-30 13:00,Career Office Studio,40
+E012,Employer 05 information session,Info session,2025-10-03 12:00,2025-10-03 13:00,Career Office Studio,120
+E013,Networking basics workshop,Workshop,2025-10-06 16:00,2025-10-06 17:00,Library Forum,60
+E014,Government careers panel,Employer panel,2025-10-08 17:00,2025-10-08 18:30,Student Center 210,80
+E015,Employer 11 information session,Info session,2025-10-09 18:00,2025-10-09 19:00,Student Center 212,120
+E016,Employer 09 information session,Info session,2025-10-13 18:00,2025-10-13 19:00,Hall B Auditorium,120
+E017,Employer 27 information session,Info session,2025-10-14 18:00,2025-10-14 19:00,Career Office Studio,120
+E018,Employer 29 information session,Info session,2025-10-16 17:00,2025-10-16 18:00,Career Office Studio,120
+E019,Case interview prep workshop,Workshop,2025-10-20 12:00,2025-10-20 13:00,Hall B Auditorium,30
+E020,Healthcare careers panel,Employer panel,2025-10-22 17:00,2025-10-22 18:30,Student Center 212,80
+E021,Employer 21 information session,Info session,2025-10-24 17:00,2025-10-24 18:00,Hall B Auditorium,80
+E022,Employer 05 information session,Info session,2025-10-27 17:00,2025-10-27 18:00,Student Center 212,60
+E023,Resume review workshop,Workshop,2025-10-29 16:00,2025-10-29 17:00,Student Center 212,30
+E024,Consumer goods careers panel,Employer panel,2025-10-31 17:00,2025-10-31 18:30,Hall B Auditorium,80
+E025,Interview practice workshop,Workshop,2025-11-03 16:00,2025-11-03 17:00,Career Office Studio,30
+E026,Networking Night,Networking night,2025-11-03 18:00,2025-11-03 20:00,Hall B Auditorium,150
+E027,Professional profiles workshop,Workshop,2025-11-07 16:00,2025-11-07 17:00,Library Forum,30
+E028,Healthcare careers panel,Employer panel,2025-11-10 17:00,2025-11-10 18:30,Career Office Studio,80
+E029,Employer 06 information session,Info session,2025-11-10 12:00,2025-11-10 13:00,Career Office Studio,40
+E030,Networking Night,Networking night,2025-11-12 18:00,2025-11-12 20:00,Library Forum,150
+E031,Nonprofit careers panel,Employer panel,2025-11-17 17:00,2025-11-17 18:30,Student Center 212,80
+E032,Offer negotiation workshop,Workshop,2025-11-17 16:00,2025-11-17 17:00,Career Office Studio,40
+E033,Networking basics workshop,Workshop,2025-11-19 12:00,2025-11-19 13:00,Library Forum,60
+E034,Networking Night,Networking night,2025-11-24 18:00,2025-11-24 20:00,Student Center 210,150
+E035,Employer 11 information session,Info session,2025-11-24 12:00,2025-11-24 13:00,Hall B Auditorium,80
+E036,Case interview prep workshop,Workshop,2025-11-26 16:00,2025-11-26 17:00,Career Office Studio,60
+E037,Employer 27 information session,Info session,2025-11-28 17:00,2025-11-28 18:00,Student Center 212,40
+E038,Employer 29 information session,Info session,2025-12-01 17:00,2025-12-01 18:00,Library Forum,80
+E039,Employer 06 information session,Info session,2025-12-04 17:00,2025-12-04 18:00,Library Forum,120
+E040,Employer 25 information session,Info session,2025-12-05 18:00,2025-12-05 19:00,Hall B Auditorium,60

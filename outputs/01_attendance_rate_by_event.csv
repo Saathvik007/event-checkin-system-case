@@ -1,0 +1,41 @@
+event_id,event_name,event_type,event_date,capacity,registered,cancelled,attended,walk_ins,total_checkins,attendance_rate_pct,no_show_rate_pct,capacity_used_pct
+E001,"Resume review workshop",Workshop,2025-09-09,40,43,2,24,2,26,55.8,44.2,65.0
+E002,"Interview practice workshop",Workshop,2025-09-11,60,34,3,21,3,24,61.8,38.2,40.0
+E003,"Employer 16 information session","Info session",2025-09-12,40,23,3,12,2,14,52.2,47.8,35.0
+E004,"Professional profiles workshop",Workshop,2025-09-15,40,38,1,19,3,22,50.0,50.0,55.0
+E005,"Fall Career Fair","Career fair",2025-09-18,700,666,40,387,36,423,58.1,41.9,60.4
+E006,"Offer negotiation workshop",Workshop,2025-09-22,30,24,4,14,2,16,58.3,41.7,53.3
+E007,"Employer 27 information session","Info session",2025-09-22,60,31,3,17,1,18,54.8,45.2,30.0
+E008,"Consumer goods careers panel","Employer panel",2025-09-23,80,42,6,21,2,23,50.0,50.0,28.8
+E009,"Employer 06 information session","Info session",2025-09-26,40,30,0,15,2,17,50.0,50.0,42.5
+E010,"Employer 25 information session","Info session",2025-09-29,60,53,4,32,4,36,60.4,39.6,60.0
+E011,"Employer 21 information session","Info session",2025-09-30,40,34,2,19,1,20,55.9,44.1,50.0
+E012,"Employer 05 information session","Info session",2025-10-03,120,102,8,58,8,66,56.9,43.1,55.0
+E013,"Networking basics workshop",Workshop,2025-10-06,60,36,4,23,3,26,63.9,36.1,43.3
+E014,"Government careers panel","Employer panel",2025-10-08,80,50,1,22,1,23,44.0,56.0,28.8
+E015,"Employer 11 information session","Info session",2025-10-09,120,94,4,60,7,67,63.8,36.2,55.8
+E016,"Employer 09 information session","Info session",2025-10-13,120,93,4,51,6,57,54.8,45.2,47.5
+E017,"Employer 27 information session","Info session",2025-10-14,120,65,4,37,6,43,56.9,43.1,35.8
+E018,"Employer 29 information session","Info session",2025-10-16,120,124,4,63,4,67,50.8,49.2,55.8
+E019,"Case interview prep workshop",Workshop,2025-10-20,30,30,2,20,1,21,66.7,33.3,70.0
+E020,"Healthcare careers panel","Employer panel",2025-10-22,80,63,5,36,2,38,57.1,42.9,47.5
+E021,"Employer 21 information session","Info session",2025-10-24,80,82,6,43,4,47,52.4,47.6,58.8
+E022,"Employer 05 information session","Info session",2025-10-27,60,39,4,21,2,23,53.8,46.2,38.3
+E023,"Resume review workshop",Workshop,2025-10-29,30,20,2,16,2,18,80.0,20.0,60.0
+E024,"Consumer goods careers panel","Employer panel",2025-10-31,80,80,4,49,9,58,61.3,38.8,72.5
+E025,"Interview practice workshop",Workshop,2025-11-03,30,31,3,21,1,22,67.7,32.3,73.3
+E026,"Networking Night","Networking night",2025-11-03,150,85,7,39,3,42,45.9,54.1,28.0
+E027,"Professional profiles workshop",Workshop,2025-11-07,30,16,1,10,1,11,62.5,37.5,36.7
+E029,"Employer 06 information session","Info session",2025-11-10,40,34,1,21,2,23,61.8,38.2,57.5
+E028,"Healthcare careers panel","Employer panel",2025-11-10,80,53,1,30,4,34,56.6,43.4,42.5
+E030,"Networking Night","Networking night",2025-11-12,150,114,4,56,5,61,49.1,50.9,40.7
+E032,"Offer negotiation workshop",Workshop,2025-11-17,40,32,4,17,1,18,53.1,46.9,45.0
+E031,"Nonprofit careers panel","Employer panel",2025-11-17,80,68,5,38,0,38,55.9,44.1,47.5
+E033,"Networking basics workshop",Workshop,2025-11-19,60,59,4,33,5,38,55.9,44.1,63.3
+E035,"Employer 11 information session","Info session",2025-11-24,80,68,6,35,3,38,51.5,48.5,47.5
+E034,"Networking Night","Networking night",2025-11-24,150,121,6,65,3,68,53.7,46.3,45.3
+E036,"Case interview prep workshop",Workshop,2025-11-26,60,48,3,36,4,40,75.0,25.0,66.7
+E037,"Employer 27 information session","Info session",2025-11-28,40,24,2,12,1,13,50.0,50.0,32.5
+E038,"Employer 29 information session","Info session",2025-12-01,80,83,2,45,6,51,54.2,45.8,63.8
+E039,"Employer 06 information session","Info session",2025-12-04,120,99,7,48,5,53,48.5,51.5,44.2
+E040,"Employer 25 information session","Info session",2025-12-05,60,33,2,21,2,23,63.6,36.4,38.3

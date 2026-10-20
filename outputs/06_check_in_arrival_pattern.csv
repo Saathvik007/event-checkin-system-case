@@ -1,0 +1,7 @@
+bucket_order,arrival_window,checkins,share_pct,cumulative_share_pct
+1,"30-60 min early",0,0.0,0.0
+2,"15-30 min early",19,1.4,1.4
+3,"0-15 min early",448,33.4,34.8
+4,"0-10 min after start",532,39.6,74.4
+5,"10-20 min after start",295,22.0,96.4
+6,"20+ min after start",49,3.6,100.0
